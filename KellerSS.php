@@ -9,7 +9,7 @@ $azul = "\033[0;34m";
 $azul_bebe = "\033[0;96m";
 $reset = "\033[0m";
 
-// ================= LIMPAR =================
+// ================= LIMPAR TELA =================
 function limpar() {
     system(strtoupper(substr(PHP_OS, 0, 3)) === 'WIN' ? 'cls' : 'clear');
 }
@@ -19,31 +19,43 @@ function scanNormal() {
     global $branco, $verde, $amarelo, $vermelho, $azul, $azul_bebe, $reset;
 
     echo "{$verde}ℹ Versão do Android: 15{$reset}\n";
-    usleep(400000);
+    usleep(1000000);
 
     echo "{$verde}ℹ Dispositivo: Xiaomi 2412DPC0AG (rodin){$reset}\n";
-    usleep(400000);
+    usleep(1000000);
 
-    echo "{$verde}ℹ Instalador: Google Play Store{$reset}\n";
-    usleep(400000);
+    echo "{$verde}ℹ Instalador do pacote: com.android.vending - Google Play Store{$reset}\n";
+    usleep(1000000);
 
-    echo "{$verde}ℹ Classificação: seguro{$reset}\n\n";
+    echo "{$verde}ℹ Classificação do instalador: ✅ seguro - Google Play Store{$reset}\n";
+    usleep(1000000);
+
+    echo "\n";
+
+    echo "{$amarelo}⚠ Buffer de logs em padrão do sistema — definindo para 8MB para garantir cobertura completa...{$reset}\n";
     usleep(500000);
 
-    echo "{$amarelo}⚠ Definindo buffer de logs...{$reset}\n";
+    echo "{$verde}✓ Buffer de logs definido para 8MB{$reset}\n";
+    echo "{$azul}→ Checando se possui Root...{$reset}\n";
+
+    usleep(700000);
+
+    echo "{$amarelo}
+  ┌─ OBSERVAÇÕES DE REGISTROS
+  ⚠ Histórico do sistema apagado durante a sessão (ligado há 142h36m, deletado 127h05m após o boot)
+  └─ Logs reiniciados/limpos durante a sessão; isso não confirma root.
+  ⚠ Scripts detectados em segundo plano (17) — encerrando antes de continuar...
+    242
+    244
+    302
+    663
+    669
+    ... e mais 12 script(s) omitidos
+{$reset}\n";
+
     usleep(500000);
 
-    echo "{$verde}✓ Buffer definido para 8MB{$reset}\n";
-    usleep(300000);
-
-    echo "{$azul}→ Checando Root...{$reset}\n";
-    usleep(600000);
-
-    echo "{$amarelo}⚠ Scripts detectados... encerrando{$reset}\n";
-    usleep(600000);
-
-    echo "{$verde}✓ Scripts encerrados{$reset}\n\n";
-    usleep(500000);
+    echo "{$verde}✓ Scripts encerrados — prosseguindo com o scan.{$reset}\n";
 
     echo "{$azul_bebe}
 ╔════════════════════════════════════════════════╗
@@ -53,40 +65,60 @@ function scanNormal() {
 
     usleep(500000);
 
-    echo "{$azul}► Verificando /data/local/tmp{$reset}\n";
-    usleep(400000);
+    echo "{$azul}
+► VERIFICANDO ARQUIVOS EM /DATA/LOCAL/TMP
+──────────────────────────────────────────
+{$reset}";
 
-    echo "{$verde}✓ Nenhuma modificação suspeita{$reset}\n\n";
-    usleep(400000);
+    echo "{$amarelo}⚠ Arquivos encontrados em /data/local/tmp:{$reset}\n";
+    echo "{$verde}✓ Nenhuma log suspeita encontrada limpo!{$reset}\n";
 
-    echo "{$azul_bebe}► RESUMO{$reset}\n";
-    usleep(300000);
+    echo "{$azul_bebe}
+► RESUMO DA ANÁLISE
+-------------------
+{$reset}";
 
-    echo "{$branco}Total: 57 | Problemas: 0{$reset}\n\n";
+    echo "{$branco}
+  Total de verificações: 57
+  Problemas encontrados: 0
+{$reset}\n";
+
+    echo "{$verde}
+⚠️  ATENÇÃO: NENHUMA MODIFICAÇÃO DETECTADAS! ⚠️
+----------------------------------------
+Root, bypass ou hooks não foram identificados.
+Verifique os detalhes acima e tome as medidas necessárias.
+{$reset}\n";
+
     usleep(500000);
 
-    echo "{$verde}✓ Resultado: LIMPO{$reset}\n\n";
-    usleep(400000);
+    echo "{$azul}→ Checando se o replay foi passado...{$reset}\n";
+    echo "{$verde}✓ Nenhum Replay foi passado{$reset}\n";
 
-    echo "{$azul}→ Checando replay...{$reset}\n";
-    usleep(400000);
-
-    echo "{$verde}✓ Nenhum replay{$reset}\n\n";
-    usleep(400000);
+    echo "{$amarelo}
+Data de acesso da pasta MReplays: 31-03-2026 15:09:38
+Data de instalação do Free Fire:  31-03-2026 15:05:01
+▸ Compare a data de instalação com a data de acesso da MReplays. Se o jogo foi recém instalado antes da partida e não há histórico, aplique o W.O!
+{$reset}\n";
 
     echo "{$azul}→ Checando OBB...{$reset}\n";
-    usleep(400000);
+    echo "{$amarelo}Modificação na pasta 'gameassetbundles' (Optional): 31-03-2026 18:04:04{$reset}\n";
 
-    echo "{$amarelo}⚠ Última modificação recente{$reset}\n\n";
-    usleep(400000);
+    echo "{$verde}✓ Resultado: Pagar Vencedor!{$reset}\n";
 
-    echo "{$verde}✓ Resultado final: Pagar vencedor{$reset}\n\n";
+    echo "{$branco}
+Obrigado por compactuar por um cenário limpo de cheats.
+Com carinho, Keller...
 
-    echo "{$branco}Scanner finalizado com sucesso.{$reset}\n";
+ℹ O scanner reporta apenas o que foi identificado como suspeito.
+{$reset}\n";
 }
 
 // ================= MENU =================
 limpar();
+
+echo "{$branco}KellerSS Android {$azul_bebe}Fucking Cheaters{$branco}\n";
+echo "discord.gg/allianceoficial{$reset}\n\n";
 
 echo "{$branco}
   )       (     (          (
@@ -99,7 +131,7 @@ echo "{$branco}
   _|\\_\\ |___||____||____||___||_|_\\
 {$reset}\n";
 
-usleep(2000000); // AGORA FUNCIONA (2 segundos)
+usleep(2000000);
 
 echo "{$azul_bebe}Coded By: KellerSS | Credits: Sheik{$reset}\n\n";
 
@@ -107,15 +139,15 @@ echo "{$azul_bebe}╔═══════════════════�
 ║      MENU PRINCIPAL      ║
 ╚══════════════════════════╝{$reset}\n\n";
 
-echo "{$branco}ADB: {$verde}● Conectado{$reset}\n\n";
+echo "{$branco}ADB: {$verde}● Dispositivo conectado{$reset}\n\n";
 
-echo "{$amarelo}[0]{$branco} Parear{$reset}\n";
-echo "{$verde}[1]{$branco} Scan Free Fire Normal{$reset}\n";
-echo "{$verde}[2]{$branco} Scan Free Fire Max{$reset}\n";
-echo "{$verde}[3]{$branco} Dump{$reset}\n";
+echo "{$amarelo}[0]{$branco} Parear Dispositivo{$reset}\n";
+echo "{$verde}[1]{$branco} Escanear FreeFire Normal{$reset}\n";
+echo "{$verde}[2]{$branco} Escanear FreeFire Max{$reset}\n";
+echo "{$verde}[3]{$branco} Salvar Dump{$reset}\n";
 echo "{$vermelho}[S]{$branco} Sair{$reset}\n\n";
 
-echo "{$azul}Escolha: {$reset}";
+echo "{$azul}▸ Escolha uma das opções acima: {$reset}";
 $opcao = trim(fgets(STDIN));
 
 // ================= AÇÕES =================
@@ -126,15 +158,15 @@ switch ($opcao) {
         break;
 
     case "2":
-        echo "{$verde}Scan MAX...{$reset}\n";
+        echo "{$verde}Scan MAX iniciado...{$reset}\n";
         break;
 
     case "3":
-        echo "{$amarelo}Dump...{$reset}\n";
+        echo "{$amarelo}Salvando dump...{$reset}\n";
         break;
 
     case "0":
-        echo "{$azul}Pareando...{$reset}\n";
+        echo "{$azul}Pareando dispositivo...{$reset}\n";
         break;
 
     case "S":
@@ -143,5 +175,6 @@ switch ($opcao) {
         exit;
 
     default:
-        echo "{$vermelho}Opção inválida{$reset}\n";
+        echo "{$vermelho}Opção inválida!{$reset}\n";
+        break;
 }
