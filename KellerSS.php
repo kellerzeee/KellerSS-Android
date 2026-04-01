@@ -1,4 +1,3 @@
-```php
 <?php
 
 // ================= CORES =================
@@ -181,4 +180,3 @@ switch ($opcao) {
         echo "{$vermelho}Opção inválida!{$reset}\n";
         break;
 }
-```
