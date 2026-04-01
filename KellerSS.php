@@ -110,8 +110,8 @@ echo "{$azul_bebe}╔═══════════════════�
 echo "{$branco}ADB: {$verde}● Conectado{$reset}\n\n";
 
 echo "{$amarelo}[0]{$branco} Parear{$reset}\n";
-echo "{$verde}[1]{$branco} Scan Normal{$reset}\n";
-echo "{$verde}[2]{$branco} Scan Max{$reset}\n";
+echo "{$verde}[1]{$branco} Scan Free Fire Normal{$reset}\n";
+echo "{$verde}[2]{$branco} Scan Free Fire Max{$reset}\n";
 echo "{$verde}[3]{$branco} Dump{$reset}\n";
 echo "{$vermelho}[S]{$branco} Sair{$reset}\n\n";
 
