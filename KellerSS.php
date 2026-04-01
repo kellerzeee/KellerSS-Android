@@ -20,9 +20,13 @@ function scanNormal() {
 
     echo "{$verde}
   ℹ Versão do Android: 15
+  usleep(1000000);
   ℹ Dispositivo: Xiaomi 2412DPC0AG (rodin)
+  usleep(1000000);
   ℹ Instalador do pacote: com.android.vending - Google Play Store
+  usleep(1000000);
   ℹ Classificação do instalador: ✅ seguro - Google Play Store
+  usleep(1000000);
 {$reset}\n";
 
     usleep(500000);
@@ -133,6 +137,7 @@ echo "{$branco}
   | |/ / | __|| |   | |   | __|| _ \\
   ' <  | _| | |__ | |__ | _| |   /
   _|\\_\\ |___||____||____||___||_|_\\
+  usleep(2000000);
 {$reset}\n";
 
 echo "{$azul_bebe}Coded By: KellerSS | Credits: Sheik{$reset}\n\n";
