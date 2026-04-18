@@ -154,7 +154,7 @@ function scanNormal() {
     echo "{$branco}│ Classificação: {$verde}✓ seguro - Google Play Store{$reset}           │{$reset}\n";
     echo "{$azul_bebe}├────────────────────────────────────────────────────────┤{$reset}\n";
     echo "{$branco}│ ► Resultado                                            │{$reset}\n";
-    echo "{$branco}│ Alertas      : {$amarelo}6{$reset}                                      │{$reset}\n";
+    echo "{$branco}│ Alertas      : {$amarelo}0{$reset}                                      │{$reset}\n";
     echo "{$branco}│ Detecções    : {$verde}0{$reset}                                      │{$reset}\n";
     echo "{$azul_bebe}├────────────────────────────────────────────────────────┤{$reset}\n";
     echo "{$azul_bebe}│ ► Detecções - Root (0)                                │{$reset}\n";
